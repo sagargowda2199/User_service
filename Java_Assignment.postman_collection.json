@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "8aae4693-8221-4cd0-b621-3658dfb3bffc",
+		"name": "Java_Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register-new-user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userid\": 1,\n    \"name\": \"kr\",\n    \"usermail\": \"sagar113@gmail.com\",\n    \"phonenum\": \"6232136233\",\n    \"pasword\": \"abcajsj\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/register-new-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register-new-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/get-all-users?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"get-all-users"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-all-users",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"for\",\n    \"userMail\": \"dinesh113@gmail.com\",\n    \"phoneNo\": \"6236233\",\n    \"password\": \"jqsorngsj\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/update-user?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"update-user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/delete-user?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"delete-user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "spring security",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "A12JKL12890uihBCLP",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://devapi.grainbank.in/api/notification/engine/v1/template/channelDetailsList",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"grainbank",
+						"in"
+					],
+					"path": [
+						"api",
+						"notification",
+						"engine",
+						"v1",
+						"template",
+						"channelDetailsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "journal-service",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/journals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"journals"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
